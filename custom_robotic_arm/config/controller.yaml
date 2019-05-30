@@ -1,0 +1,7 @@
+arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - One_joint
+    - Two_joint
+    - Three_joint
+    - Four_joint

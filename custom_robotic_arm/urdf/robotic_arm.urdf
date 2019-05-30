@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<!-- roslaunch urdf_tutorial display.launch moedl:='$(find custom_robotic_arm)/urdf/robotic_arm.urdf'-->
+<robot name="robotic_arm">
+    <link name="world"/>
+    <!-- BASE LINK-->
+        <link name="base_link">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.3" length="0.05"/>
+                </geometry>
+                <material name="Black"/>
+                <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.3" length="0.05"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.025"/>
+                <inertia ixx="027" izz="0.005" iyy="0.0027" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="fixed_base" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+        
+    </joint>
+
+    <!-- One LINK-->
+    <link name="One">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.05" length="0.5"/>
+                </geometry>
+                <material name="Silver">
+                <color rgba="0.75 0.75 0.75 1.0"/>
+                </material>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <!--Its the relation between joint and the body in distance-->
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.05" length="0.5"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <inertia ixx="0.02176" izz="0.00125" iyy="0.02146" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="One_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="One"/>
+        <axis xyz="0.0 0.0 1"/>
+        <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0"/>
+        
+    </joint>
+
+    <!-- Two LINK-->
+    <link name="Two">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.05" length="0.5"/>
+                </geometry>
+                <material name="Silver">
+                <color rgba="0.75 0.75 0.75 1.0"/>
+                </material>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <!--Its the relation between joint and the body in distance-->
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.05" length="0.5"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <inertia ixx="0.01396" izz="0.0015" iyy="0.01396" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="Two_joint" type="continuous">
+        <parent link="One"/>
+        <child link="Two"/>
+        <axis xyz="0.0 0.0 1"/>
+        <origin xyz="0.0 0 0.55" rpy="0.0 1.5708 0"/>
+        <!--This origin is relation between parent and child joint-->
+        
+    </joint>
+
+    <!-- Two LINK-->
+    <link name="Three">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.05" length="0.3"/>
+                </geometry>
+                <material name="Silver">
+                <color rgba="0.75 0.75 0.75 1.0"/>
+                </material>
+                <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0"/>
+                <!--Its the relation between joint and the body in distance-->
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.05" length="0.3"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <inertia ixx="0.01396" izz="0.0015" iyy="0.01396" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="Three_joint" type="continuous">
+        <parent link="Two"/>
+        <child link="Three"/>
+        <axis xyz="0.0 0 1"/>
+        <origin xyz="0.0 0 0.5" rpy="0.0 -1.5708 0"/>
+        <!--This origin is relation between parent and child joint-->
+        
+    </joint>
+
+
+    <!-- Four LINK-->
+    <link name="Four">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.05" length="0.5"/>
+                </geometry>
+                <material name="Silver">
+                <color rgba="0.75 0.75 0.75 1.0"/>
+                </material>
+                <origin xyz="0.0 0.0 0.2" rpy="0.0 0.0 0.0"/>
+                <!--Its the relation between joint and the body in distance-->
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.05" length="0.5"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <inertia ixx="0.01396" izz="0.0015" iyy="0.01396" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="Four_joint" type="continuous">
+        <parent link="Three"/>
+        <child link="Four"/>
+        <axis xyz="0.0 0.0 1"/>
+        <origin xyz="0.0 0 0.3" rpy="0.0 1.5708 0"/>
+        <!--This origin is relation between parent and child joint-->
+        
+    </joint>
+    <!-- Gripper_BASE LINK-->
+    <link name="Gripper_Base">
+            <visual>
+                <geometry>
+                    <cylinder radius="0.08" length="0.05"/>
+                </geometry>
+                <material name="Silver">
+                <color rgba="0.75 0.75 0.75 1.0"/>
+                </material>
+                <origin xyz="0.0 0.0 0.04" rpy="0.0 0.0 0.0"/>
+                <!--Its the relation between joint and the body in distance-->
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="0.08" length="0.05"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.04" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <inertia ixx="0.01396" izz="0.00125" iyy="0.01396" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="Gripper_Base_joint" type="continuous">
+        <parent link="Four"/>
+        <child link="Gripper_Base"/>
+        <axis xyz="0.0 0.0 1"/>
+        <origin xyz="0.0 0 0.45" rpy="0.0 0 0"/>
+        <!--This origin is relation between parent and child joint-->
+        
+    </joint>
+
+       
+
+    <!-- Left_finger LINK-->
+    <link name="L_F">
+            <visual>
+                <geometry>
+                    <box size="0.02 0.02 0.15"/>
+                </geometry>
+                <material name="Red"/>
+                <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0"/>
+                <!--Its the relation between joint and the body in distance-->
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="0.02 0.02 0.15"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <inertia ixx="100" izz="0.0015" iyy="100" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="L_F_joint" type="prismatic">
+        <limit lower="-0.02" upper="0.02" effort="100.0" velocity="1.0"/>
+        <parent link="Gripper_Base"/>
+        <child link="L_F"/>
+        <axis xyz="0.0 1 0"/>
+        <origin xyz="0.0 -0.04 0.04" />
+        <!--This origin is relation between parent and child joint-->
+        
+    </joint>
+
+    <!-- Right Finger LINK-->
+    <link name="R_F">
+            <visual>
+                <geometry>
+                    <box size="0.02 0.02 0.15"/>
+                </geometry>
+                <material name="Red"/>
+                <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0"/>
+                <!--Its the relation between joint and the body in distance-->
+            </visual>
+            <collision>
+                <geometry>
+                    <box size="0.02 0.02 0.15"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0"/>
+            </collision>
+            <inertial>
+                <mass value="1"/>
+                <origin xyz="0.0 0.0 0.25" rpy="0.0 0.0 0.0"/>
+                <inertia ixx="100" izz="0.0015" iyy="100" ixy="0.0" ixz="0.0"  iyz="0.0" />
+            </inertial>
+    </link>
+
+    <joint name="R_F_joint" type="prismatic">
+        <limit lower="0.02" upper="-0.02" effort="100.0" velocity="1.0"/>
+        <parent link="Gripper_Base"/>
+        <child link="R_F"/>
+        <axis xyz="0.0 1 0"/>
+        <origin xyz="0.0 0.04 0.04" />
+        <!--This origin is relation between parent and child joint-->
+        
+    </joint>
+ 
+
+</robot>

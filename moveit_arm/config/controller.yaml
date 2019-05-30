@@ -1,0 +1,10 @@
+controller_manager_ns: /
+controller_list:
+  - name: arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - One_joint
+      - Two_joint
+      - Three_joint
+      - Four_joint 
