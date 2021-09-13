@@ -1,0 +1,32 @@
+manipulator:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  main_controller:
+    type: position_controllers/JointTrajectoryController
+    joints: 
+        - link_1_joint
+        - link_2_joint
+        - link_3_joint
+        - link_4_joint
+        - link_grip_r_joint
+        - link_grip_l_joint
+    constrainsts:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.05
+      joint1: {trajectory: 0.1, goal: 0.1}
+      joint2: {trajectory: 0.1, goal: 0.1}
+      joint3: {trajectory: 0.1, goal: 0.1}
+    stop_trajectory_duraction: 0.5
+    state_publish_rate: 25
+    action_monitor_rate: 10
+
+
+
+
+
+
+  

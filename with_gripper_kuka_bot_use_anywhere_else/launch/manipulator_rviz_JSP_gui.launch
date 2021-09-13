@@ -1,0 +1,9 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <param name="robot_description" command="cat $(find kuka_bot)/robots/manipulator.urdf" />
+  <node name="sim" pkg="rviz" type="rviz" output="screen" args="-d $(find kuka_bot)/config/config.rviz" />
+  <node name="awaien" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" output="screen"/>
+  <node name="robot_states" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+</launch>
