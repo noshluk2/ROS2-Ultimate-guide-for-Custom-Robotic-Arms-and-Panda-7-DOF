@@ -1,0 +1,7 @@
+<launch>
+<arg name="world"       default="$(find franka_gazebo)/world/cafe.world"  />
+
+<include file="$(find franka_gazebo)/launch/gazebo_Controllers.launch" >
+    <arg name="world" value="$(arg world)"/>
+  </include>
+</launch>
