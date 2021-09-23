@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <param name="robot_description" textfile="$(find bazu)/urdf/bazu.urdf"/> 
+    
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+    
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model bazu"    />
+
+    <node name="RSP" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+    <node name="JSP" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
+
+   
+    
+
+</launch>

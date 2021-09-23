@@ -1,7 +1,0 @@
-<launch>
-    <include file="$(find custom_robotic_arm)/launch/arm_gazebo.launch" />
-    <include file="$(find moveit_arm)/launch/move_group.launch" />
-    <include file="$(find moveit_arm)/launch/moveit_rviz.launch" >
-        <arg name="config" value="True"/>
-    </include>
-</launch>

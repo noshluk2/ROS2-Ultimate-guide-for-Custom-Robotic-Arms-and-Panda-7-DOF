@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<robot name="bazu">
+
+  <link name="world"/>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.05" radius="0.1"/>
+            </geometry>
+            <material name="silver">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+            <origin rpy="0 0 0" xyz="0 0 0.025"/>
+        </visual>
+
+    <collision>
+        <geometry>
+            <cylinder length="0.05" radius="0.1"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 0.025"/>
+    </collision>
+
+    <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0.025"/>
+        <mass value="5.0"/>
+        <inertia ixx="0.0135" ixy="0.0" ixz="0.0" iyy="0.0135" iyz="0.0" izz="0.05"/>
+    </inertial>
+    
+
+    </link>
+
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link name="link_1">
+    <visual>
+        <geometry>
+            <cylinder length="0.5" radius="0.05"/>
+        </geometry>
+        <material name="silver">
+            <color rgba="0.75 0.75 0.75 1"/>
+        </material>
+        <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    </visual>
+
+    <collision>
+        <geometry>
+            <cylinder length="0.5" radius="0.05"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    </collision>
+    
+    <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0.25"/>
+        <mass value="5.0"/>
+        <inertia ixx="0.107" ixy="0.0" ixz="0.0" iyy="0.107" iyz="0.0" izz="0.0125"/>
+    </inertial>
+
+  </link>
+  
+  <joint name="joint_1" type="continuous">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.05"/>
+  </joint>
+
+<link name="link_2">
+    <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0.2"/>
+        <mass value="2.0"/>
+        <inertia ixx="0.027" ixy="0.0" ixz="0.0" iyy="0.027" iyz="0.0" izz="0.0025"/>
+    </inertial>
+
+    <visual>
+        <geometry>
+        <cylinder length="0.4" radius="0.05"/>
+        </geometry>
+        <material name="silver"/>
+        <origin rpy="0 0 0" xyz="0 0 0.2"/>
+    </visual>
+
+    <collision>
+        <geometry>
+                <cylinder length="0.4" radius="0.05"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 0.2"/>
+    </collision>
+
+</link>
+
+<joint name="joint_2" type="continuous">
+<axis xyz="0 1 0"/>
+<parent link="link_1"/>
+<child link="link_2"/>
+<origin rpy="0 1.5708 0" xyz="0.0 -0.1 0.45"/>
+</joint>
+
+<link name="link_3">
+    <inertial>
+        <origin rpy="0 0 0" xyz="0 0 0.2"/>
+        <mass value="2.0"/>
+        <inertia ixx="0.027" ixy="0.0" ixz="0.0" iyy="0.027" iyz="0.0" izz="0.0025"/>
+    </inertial>
+    
+    <visual>
+        <geometry>
+        <cylinder length="0.4" radius="0.05"/>
+        </geometry>
+        <material name="silver"/>
+        <origin rpy="0 0 0" xyz="0 0 0.2"/>
+        </visual>
+
+    <collision>
+        <geometry>
+            <cylinder length="0.4" radius="0.05"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 0.2"/>
+    </collision>
+</link>
+
+<joint name="joint_3" type="continuous">
+<axis xyz="0 0 1"/>
+<parent link="link_2"/>
+<child link="link_3"/>
+<origin rpy="0 0 0" xyz="0.0 0.1 0.35"/>
+</joint>
+
+
+<link name="link_4">
+    <inertial>
+        <mass value="1.0"/>
+        <inertia ixx="0.00042" iyy="0.00042" izz="0.00042" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+
+    <visual>
+        <geometry>
+            <box size="0.05 0.05 0.05"/>
+        </geometry>
+        <material name="silver"/>
+    </visual>
+
+    <collision>
+        <geometry>
+            <box size="0.05 0.05 0.05"/>
+        </geometry>
+    </collision>
+</link>
+
+<joint name="joint_4" type="continuous">
+<axis xyz="0 1 0"/>
+<parent link="link_3"/>
+<child link="link_4"/>
+<origin rpy="0 0 0" xyz="0.0 0.0 0.425"/>
+</joint> 
+
+
+
+<gazebo reference="base_link">
+    <material>Gazebo/Black</material>
+</gazebo>
+<gazebo reference="link_1">
+    <material>Gazebo/Grey</material>
+</gazebo>
+<gazebo reference="link_2">
+    <material>Gazebo/Orange</material>
+</gazebo>
+<gazebo reference="link_3">
+    <material>Gazebo/Black</material>
+</gazebo>
+<gazebo reference="link_4">
+    <material>Gazebo/Yellow</material>
+</gazebo>
+
+
+<!-- PositionJointInterface -->
+<!-- EffortJointInterface -->
+<transmission name ="trans_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_1">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="trans_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_2">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name ="trans_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_3">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+<transmission name ="trans_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_4">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<gazebo>
+    <plugin name="control" filename="libgazebo_ros_control.so"/>
+</gazebo>
+
+</robot>

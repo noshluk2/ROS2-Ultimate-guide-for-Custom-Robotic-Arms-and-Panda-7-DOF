@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <param name="robot_description" textfile="$(find bazu)/urdf/bazu.urdf"/> 
+
+    <node name="rviz_gui" pkg="rviz" type="rviz" output="screen"/>
+    
+    <node name="RSP" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+    
+    <node name="JSP" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" output="screen"/>
+    
+
+</launch>

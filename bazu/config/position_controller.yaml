@@ -1,0 +1,15 @@
+
+joint_1_controller:
+  type: "position_controllers/JointPositionController"
+  joint: joint_1
+joint_2_controller:
+  type: "position_controllers/JointPositionController"
+  joint: joint_2
+
+joint_3_controller:
+  type: "position_controllers/JointPositionController"
+  joint: joint_3
+  
+joint_4_controller:
+  type: "position_controllers/JointPositionController"
+  joint: joint_4

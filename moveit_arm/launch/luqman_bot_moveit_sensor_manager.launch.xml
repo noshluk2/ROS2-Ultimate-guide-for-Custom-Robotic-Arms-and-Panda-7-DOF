@@ -1,3 +1,0 @@
-<launch>
-    <rosparam command="load" file="$(find moveit_arm)/config/sensors_3d.yaml" />
-</launch>

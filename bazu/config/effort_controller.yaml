@@ -1,0 +1,19 @@
+
+joint_1_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: joint_1
+  pid: {p: 1.0, i: 0.01, d: 1.0}
+joint_2_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: joint_2
+  pid: {p: 1.0, i: 0.01, d: 1.0}
+
+joint_3_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: joint_3
+  pid: {p: 1.0, i: 0.01, d: 1.0}
+  
+joint_4_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: joint_4
+  pid: {p: 1.0, i: 0.01, d: 1.0}
