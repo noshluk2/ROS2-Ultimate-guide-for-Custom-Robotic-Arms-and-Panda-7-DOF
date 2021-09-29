@@ -1,7 +1,5 @@
-# ROS1 Ultimate Robotic Arm Course for Begginers with Moveit 
-# Repository Under Construction
+# ROS Ultimate guide for Custom Robotic Arms and Panda 7 DOF
 
-# ROS Ultimate guide for Custom Robotic Arms and Panda 7 DOF  
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -18,7 +16,7 @@
 </details>
 
 ## About this Repository
-ROS1 Noetic is the main framework we will be using in this course , Turtlesim package , TurtleBot3 and our Custom Robot Dolly is what we are going to create add sensors to these robots and write algorithms to avoid obstacles in simulation of Gaebo
+This is repository for the course **ROS Ultimate guide for Custom Robotic Arms and Panda 7 DOF** availble at Udemy . All the codes are open sourced . Notes are also attached in root of the repo.
 
  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/mainCover.png)
 - **[[Get course Here]](https://www.udemy.com/course/robotics-with-ros-build-robotic-arm-in-gazebo-and-moveit/?couponCode=GITHUB)**
@@ -31,7 +29,7 @@ ROS1 Noetic is the main framework we will be using in this course , Turtlesim pa
   ```
 * Clone the repository in your workspace
 ```
-git clone https://github.com/noshluk2/ROS-Ultimate-Guide-for-Beginners-with-TurtleBot3-and-Robot
+git clone https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-
 ```
 
 
@@ -54,13 +52,11 @@ echo "source /path/to/catkin-ws/devel/setup.bash" >> ~/.bashrc
 
 ----
 ## Course Workflow
-- We will get some basics of ROS1 with the help of in-built ROS1 package **TurtleSim** . Then we will move toward very useful concepts which are nodes , package, topic -> Publishing/Subscribing
+- We will start by creating a custom robot named as BAZU . Which will be created from scratch , URDF containing joints, links are going to be explored in depth. Once the robotic arm will be created we will add Controllers into it (position, effort, Joint Trajectory) from ros_control package .This will lead us to DH tables for forward and inverse kinematics solutions for our custom robot using Robotics Toolbox by Peter Corke .
 
-- We will deep dive into a **TurtleBot3** robot package and understand how it is built and how we can manipulate it .
+- After understanding all the basics of with a Custom Robotic Arm we will move to a very well known commercial robotic arm Franka Emika Panda 7 degree of freedom robotic arm. Our first Object will be to install custom controller into it as we would have learned that in previous sections .Only reason to do that is to be able to control any working URDF robot available . Forward and inverse kinematics will be solved for this robot with the help of robotics tool box mentioned earlier .
 
-- This will lead us towards creation of our new package **Dolly** which is a car that we will be creating from scratch using URDF xml syntax . Next we will create its Gazebo and RVIZ1 3D simulator . Then we will add Differential Drive Plugin in our robot and drive it .
-
-With these simulators endless possibilities of projects will open by adding the virtual sensors to your Robot.
+- Last thing we will do is to make a action lib interface for Joint Trajectory for panda  robot so we just need to send way points and it moves it's end effect in a shape that we will define .
 
 
 ---
@@ -92,7 +88,7 @@ Below is a discounted coupon for people who want to take the course in which mor
 
 ----
 ## Notes
-We have uploaded all the notes made during the lectures of the course so you can get more out of this repository with the instructors Notes. A seperate folder named as **Notes** contain a single PDF carrying all the notes in the root of this repository
+ We have uploaded all the notes made during the lectures of the course so you can get more out of this repository with the instructors Notes. A seperate folder named as **Notes** contain a single PDF carrying all the notes in the root of this repository
 ----
 
 ## Instructors
