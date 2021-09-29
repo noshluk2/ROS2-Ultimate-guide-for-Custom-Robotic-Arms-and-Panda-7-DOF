@@ -20,7 +20,7 @@
 ## About this Repository
 ROS1 Noetic is the main framework we will be using in this course , Turtlesim package , TurtleBot3 and our Custom Robot Dolly is what we are going to create add sensors to these robots and write algorithms to avoid obstacles in simulation of Gaebo
 
- ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/main/Images/mainCover.png)
+ ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/mainCover.png)
 - **[[Get course Here]](https://www.udemy.com/course/robotics-with-ros-build-robotic-arm-in-gazebo-and-moveit/?couponCode=GITHUB)**
 ----
 ## Using this Repository
@@ -66,15 +66,15 @@ With these simulators endless possibilities of projects will open by adding the 
 ---
 ## Features
 * **Building Custom Robotic Arm** 
-  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/main/Images/bazu_urdf.gif)
+  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/bazu_urdf.gif)
 * **Controllers Test** 
-  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/main/Images/controller_test.gif)
+  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/controller_test.gif)
 * **DH Table Derivation** 
-  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/main/Images/dh_table.gif)
+  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/dh_table.gif)
 * **Forward and Inverse Kinematics Solutions** 
-  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/main/Images/fk_ik_.gif)
+  -  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/fk_ik_.gif)
 * **Drawing Shapes**
-  - ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/main/Images/panda_move.gif)
+  - ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/panda_move.gif)
 * 
 
 
