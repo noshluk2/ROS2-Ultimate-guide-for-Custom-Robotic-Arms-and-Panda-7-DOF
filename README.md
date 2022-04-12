@@ -19,7 +19,7 @@
 This is repository for the course **ROS Ultimate guide for Custom Robotic Arms and Panda 7 DOF** availble at Udemy . All the codes are open sourced . Notes are also attached in root of the repo.
 
  ![alt text](https://github.com/noshluk2/ROS-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF-/blob/master/Images/mainCover.png)
-- **[[Get course Here]](https://www.udemy.com/course/robotics-with-ros-build-robotic-arm-in-gazebo-and-moveit/?couponCode=TEACHMEROBOTICARMS)**
+- **[[Get course Here]](https://www.udemy.com/course/robotics-with-ros-build-robotic-arm-in-gazebo-and-moveit/?couponCode=25F74892A6AA6CCB340F)**
 ----
 ## Using this Repository
 * Move into your workspace/src folder
@@ -84,7 +84,7 @@ echo "source /path/to/catkin-ws/devel/setup.bash" >> ~/.bashrc
 ## Link to the Course
 Below is a discounted coupon for people who want to take the course in which more explaination to this code has been added
 
-**[[Get course Here]](https://www.udemy.com/course/robotics-with-ros-build-robotic-arm-in-gazebo-and-moveit/?couponCode=TEACHMEROBOTICARMS)**
+**[[Get course Here]](https://www.udemy.com/course/robotics-with-ros-build-robotic-arm-in-gazebo-and-moveit/?couponCode=25F74892A6AA6CCB340F)**
 
 ----
 ## Notes
