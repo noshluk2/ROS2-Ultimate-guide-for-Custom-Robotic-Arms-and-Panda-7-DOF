@@ -22,6 +22,13 @@ This is repository for the course **ROS Ultimate guide for Custom Robotic Arms a
 - **[[Get course Here]](https://www.udemy.com/course/robotics-with-ros-build-robotic-arm-in-gazebo-and-moveit/?couponCode=APRIL_END)**
 ----
 ## Using this Repository
+* Install Dependencies
+ ```
+ sudo apt install ros-<distro>-libfranka ros-<distro>-franka-ros
+
+## for noetic
+ sudo apt install ros-noetic-libfranka ros-noetic-franka-ros 
+  ```
 * Move into your workspace/src folder
  ```
  cd path/to/ros1_ws/src/
