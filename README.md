@@ -20,6 +20,13 @@ This is repository for the course **ROS2 Ultimate guide for Custom Robotic Arms 
 - **[[Get course Access]](https://robotisim.com/project-based-course/)**
 ----
 ## Using this Repository
+* Install Dependencies
+ ```
+ sudo apt install ros-<distro>-libfranka ros-<distro>-franka-ros
+
+## for noetic
+ sudo apt install ros-noetic-libfranka ros-noetic-franka-ros 
+  ```
 * Move into your workspace/src folder
  ```
  cd path/to/ros2_ws/src/
